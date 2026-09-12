@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión | Gourmet Hub</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu">
+            <div class="menu-espacio"></div>
+
+            <span class="logo">Gourmet Hub</span>
+
+            <ul class="menu-derecha">
+                <li><a href="login.html">Ingresar</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-formulario">
+
+        <section class="contenedor-formulario contenedor-login">
+            <h1>Iniciar sesión</h1>
+
+            <p class="introduccion-formulario">
+                Ingresa tus datos para acceder a Gourmet Hub.
+            </p>
+
+            <form id="formulario-login" novalidate>
+
+                <div class="grupo-formulario">
+                    <label for="correo-login">
+                        Correo electrónico *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo-login"
+                        name="correo"
+                        maxlength="100"
+                        autocomplete="email"
+                        placeholder="usuario@duoc.cl"
+                    >
+
+                    <small
+                        id="error-correo-login"
+                        class="mensaje-error">
+                    </small>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="contrasena-login">
+                        Contraseña *
+                    </label>
+
+                    <input
+                        type="password"
+                        id="contrasena-login"
+                        name="contrasena"
+                        autocomplete="current-password"
+                        placeholder="Ingresa tu contraseña"
+                    >
+
+                    <p class="sugerencia">
+                        Debe tener al menos 10 caracteres, igual que tu contraseña de registro.
+                    </p>
+
+                    <small
+                        id="error-contrasena-login"
+                        class="mensaje-error">
+                    </small>
+                </div>
+
+                <button type="submit" class="boton boton-enviar">
+                    Ingresar
+                </button>
+
+                <p id="mensaje-login"></p>
+
+                <p class="enlace-registro">
+                    ¿Todavía no tienes una cuenta?
+                    <a href="registro.html">Regístrate aquí</a>
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Gourmet Hub</p>
+        <p>Productos gastronómicos y talleres de cocina.</p>
+        <p>Contacto: contacto@gourmethub.cl</p>
+    </footer>
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

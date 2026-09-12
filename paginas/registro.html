@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro | Gourmet Hub</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu">
+            <div class="menu-espacio"></div>
+
+            <span class="logo">Gourmet Hub</span>
+
+            <ul class="menu-derecha">
+                <li><a href="login.html">Ingresar</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-formulario">
+
+        <section class="contenedor-formulario">
+            <h1>Crear una cuenta</h1>
+
+            <p class="introduccion-formulario">
+                Completa tus datos para registrarte en Gourmet Hub.
+                Los campos marcados con * son obligatorios.
+            </p>
+
+            <form id="formulario-registro" novalidate>
+
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre completo *</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        maxlength="70"
+                        autocomplete="name"
+                        placeholder="Ejemplo: Ana Pérez"
+                    >
+
+                    <small id="error-nombre" class="mensaje-error"></small>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="correo">Correo electrónico *</label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        maxlength="60"
+                        autocomplete="email"
+                        placeholder="nombre@duoc.cl"
+                    >
+
+                    <small id="error-correo" class="mensaje-error"></small>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="contrasena">Contraseña *</label>
+
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        autocomplete="new-password"
+                        placeholder="Ingresa tu contraseña"
+                    >
+
+                    <p class="sugerencia">
+                        Debe tener mínimo 10 caracteres, dos mayúsculas,
+                        una minúscula, un número y un símbolo !, #, $ o %.
+                    </p>
+
+                    <small id="error-contrasena" class="mensaje-error"></small>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="confirmar-contrasena">
+                        Confirmar contraseña *
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmar-contrasena"
+                        name="confirmarContrasena"
+                        autocomplete="new-password"
+                        placeholder="Repite tu contraseña"
+                    >
+
+                    <small
+                        id="error-confirmar-contrasena"
+                        class="mensaje-error">
+                    </small>
+                </div>
+
+                <fieldset class="grupo-formulario">
+                    <legend>Restricciones alimentarias *</legend>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="restricciones"
+                            value="Celiaco"
+                        >
+                        Celíaco
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="restricciones"
+                            value="Vegano"
+                        >
+                        Vegano
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="restricciones"
+                            value="Vegetariano"
+                        >
+                        Vegetariano
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="restricciones"
+                            value="Lactosa"
+                        >
+                        Intolerante a la lactosa
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="restricciones"
+                            value="Frutos secos"
+                        >
+                        Frutos secos
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="restriccion-ninguna"
+                            name="restricciones"
+                            value="Ninguna"
+                        >
+                        Ninguna
+                    </label>
+
+                    <small
+                        id="error-restricciones"
+                        class="mensaje-error">
+                    </small>
+                </fieldset>
+
+                <fieldset class="grupo-formulario">
+                    <legend>Recetas o cursos de interés *</legend>
+
+                    <div id="contenedor-recetas"></div>
+
+                    <button
+                        type="button"
+                        id="agregar-receta"
+                        class="boton boton-secundario">
+                        Agregar receta o curso
+                    </button>
+
+                    <small id="error-recetas" class="mensaje-error"></small>
+                </fieldset>
+
+                <button type="submit" class="boton boton-enviar">
+                    Crear cuenta
+                </button>
+
+                <p id="mensaje-exito" class="mensaje-exito"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Gourmet Hub</p>
+        <p>Productos gastronómicos y talleres de cocina.</p>
+        <p>Contacto: contacto@gourmethub.cl</p>
+    </footer>
+
+    <script src="../js/registro.js"></script>
+</body>
+
+</html>
